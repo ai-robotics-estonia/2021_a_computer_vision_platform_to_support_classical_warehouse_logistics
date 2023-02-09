@@ -1,0 +1,22 @@
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/dropdown';
+
+
+.form {
+  &-label {
+    display: inline;
+
+    &.required:after {
+      content:"*";
+      color:red;
+    }
+  }
+}
+
+input[type='number'].no-arrows::-webkit-inner-spin-button,
+input[type='number'].no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}

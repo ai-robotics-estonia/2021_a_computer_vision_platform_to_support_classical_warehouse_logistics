@@ -1,0 +1,53 @@
+@import 'fonts';
+@import 'variables';
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/transitions';
+
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/spinners';
+@import '~bootstrap/scss/containers';
+
+@import '~bootstrap/dist/css/bootstrap.css';
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+svg {
+  stroke: currentColor;
+}
+.stroke-none {
+  stroke: none;
+}
+
+a svg {
+  color: $black;
+}
+
+a:hover svg {
+  color: $primary;
+}
+
+.max-view {
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+.transform-center {
+  left: 50%;
+  transform: translate(-50%, 0px);
+}

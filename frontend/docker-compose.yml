@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  prod-frontend:
+    image: falcon-frontend:latest
+    container_name: "prod-frontend"
+    ports:
+      - "3000:80"

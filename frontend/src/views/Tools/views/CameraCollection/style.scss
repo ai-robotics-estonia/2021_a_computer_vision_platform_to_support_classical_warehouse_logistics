@@ -1,0 +1,10 @@
+.camera-collection {
+  .point {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    color: blue;
+    line-height: 0;
+    font-weight: bold;
+  }
+}

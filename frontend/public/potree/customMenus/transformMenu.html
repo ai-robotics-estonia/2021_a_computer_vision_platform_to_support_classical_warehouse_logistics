@@ -1,0 +1,22 @@
+<h3 id="menu_transform" class="accordion-header ui-widget"><span>Transform</span></h3>
+<div class="accordion-content ui-widget pv-menu-list" style="display: none">
+    <div class="divider"><span>Rotate</span></div>
+    <span>
+        <input id="tAngle" type="number" placeholder="degrees" value="0">
+    </span>
+    <div class="divider"><span>Offset</span></div>
+    <span style="display: flex">
+        <input id="tOffsetX" name="offsetX" type="number" placeholder="X" style="width: 100%" value="0">
+        <input id="tOffsetY" name="offsetY" type="number" placeholder="Y" style="width: 100%" value="0">
+        <input id="tOffsetZ" name="offsetZ" type="number" placeholder="Z" style="width: 100%" value="0">
+    </span>
+    <div class="divider"><span>Scale</span></div>
+    <span>
+        <input id="tScale" name="scale" type="number" value="1">
+    </span>
+    <div style="display: flex">
+        <button id="tTryBtn" class="ui-button ui-state-default" style="flex: 1; margin: 0; border-radius: 4px 0 0 4px" title="Changes not effect original">Try</button>
+        <button id="tResetBtn" class="ui-button ui-state-default" style="flex: 1; margin: 0; border-radius: 0" title="All changes will be gone! This may take some time">Reset</button>
+        <button id="tSubmitBtn" class="ui-button ui-state-default" style="flex: 1; margin: 0; border-radius: 0 4px 4px 0" title="Changes will be applied! This may take some time">Update</button>
+    </div>
+</div>

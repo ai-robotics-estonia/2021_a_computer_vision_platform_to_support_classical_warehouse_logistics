@@ -1,0 +1,25 @@
+.hover-button {
+  position: relative;
+
+  &-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    transition: all 300ms;
+  }
+  &-background:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  &-background:focus {
+    opacity: 1;
+  }
+}

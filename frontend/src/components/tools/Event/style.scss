@@ -1,0 +1,16 @@
+#eventLines {
+  position: absolute;
+  > line {
+    stroke-width: 3px;
+  }
+
+  > circle:hover {
+    stroke-width: 5px;
+  }
+}
+
+.camera-visibility {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.25rem;
+}

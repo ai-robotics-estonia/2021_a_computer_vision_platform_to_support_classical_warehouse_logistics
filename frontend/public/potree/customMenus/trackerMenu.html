@@ -1,0 +1,32 @@
+<h3 id="menu_tracker" class="accordion-header ui-widget"><span>Tracking</span></h3>
+<div class="accordion-content ui-widget pv-menu-list" style="display: none">
+    <div class="divider"><span>Input Data</span></div>
+    <span style="display: flex">
+        <input id="pUrl" type="text" placeholder="Url">
+        <button id="pUrlSubmitBtn" class="ui-button ui-state-default" style="flex: 1; margin: 0; border-radius: 4px">Load</button>
+    </span>
+
+    <div class="divider"><span>Visualize Style</span></div>
+    <span style="display: flex">
+        <button id="pModeShadowBtn" class="ui-button ui-state-default" style="flex: 1; margin: 0; border-radius: 4px 0 0 4px">Shadow</button>
+        <button id="pModeLastBtn" class="ui-button ui-state-default" style="flex: 1; margin: 0; border-radius: 0 4px 4px 0">Last</button>
+    </span>
+
+    <div class="divider"><span>Speed</span></div>
+    <span>
+        <input id="pSpeed" type="number" value="1">
+    </span>
+    <div class="divider"><span>Frequency</span></div>
+    <span>
+        <input id="pFrequency" type="number" placeholder="Hz" value="1">
+    </span>
+    <div>
+        <span>Timestamp</span>: <span id="pTimeNow">0:00</span> / <span id="pTimeMax">1:30</span>
+        <div id="pTimeBar"></div>
+    </div>
+
+    <div style="display: flex">
+        <button id="pPauseBtn" class="ui-button ui-state-default" style="flex: 1; margin: 0; border-radius: 4px 0 0 4px">Pause</button>
+        <button id="pPlayBtn" class="ui-button ui-state-default" style="flex: 1; margin: 0; border-radius: 0 4px 4px 0">Play</button>
+    </div>
+</div>

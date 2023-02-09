@@ -1,0 +1,16 @@
+stages:
+    - build
+    - deploy
+build:
+    stage: build
+    script:
+        - docker build -t falcon-frontend:latest . -f Dockerfile
+    only:
+        - main
+deploy:
+    stage: deploy
+    script:
+        - docker compose down
+        - docker compose up -d
+    only:
+        - main

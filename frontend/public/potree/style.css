@@ -1,0 +1,10 @@
+.ui-button {
+    border-radius: 4px;
+    border: 1px solid black;
+}
+.ui-button:active {
+    border: 1px solid black;
+}
+.ui-button:hover {
+    border: 1px solid black;
+}

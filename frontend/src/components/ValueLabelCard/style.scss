@@ -1,0 +1,36 @@
+@import "src/assets/scss/import";
+
+.value-label-card {
+  justify-content: center;
+  text-align: center;
+  padding: 0.8rem;
+  height: 100%;
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .title {
+    &-section {
+      line-height: 1;
+      margin-bottom: 1rem;
+      > {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    color: $secondary;
+    font-weight: bold;
+  }
+  .description {
+    color: $info;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  .value {
+    font-weight: bold;
+  }
+  .label {
+    line-height: 1;
+  }
+}

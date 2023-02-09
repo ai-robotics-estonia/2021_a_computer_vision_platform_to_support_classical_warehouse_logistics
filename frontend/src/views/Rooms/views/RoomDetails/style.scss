@@ -1,0 +1,9 @@
+.image-gallery-content.fullscreen {
+  display: block;
+  .image-gallery-image {
+    max-height: 100vh !important;
+  }
+}
+.image-gallery-content {
+  display: none;
+}

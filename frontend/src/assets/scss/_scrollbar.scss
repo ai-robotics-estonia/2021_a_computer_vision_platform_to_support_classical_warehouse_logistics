@@ -1,0 +1,16 @@
+@import 'variables';
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  z-index: 1000;
+  margin-right: -8px;
+  width: 8px;
+  background: $primary;
+}
