@@ -1,0 +1,60 @@
+version: "3.9"
+
+services:
+  laosysteem-be:
+    container_name: laosysteem-be
+    ports:
+      - "8000:8000"
+    pull_policy: never
+    depends_on:
+      database:
+        condition: service_healthy
+    volumes:
+      - ${DOCKER_SECRET_FOLDER_PATH}:/etc/laosysteem
+
+
+  laosysteem-scheduler:
+    container_name: laosysteem-scheduler
+    depends_on:
+      - cache
+
+
+  laosysteem-worker:
+    container_name: laosysteem-worker
+    depends_on:
+      - cache
+    volumes:
+      - ${DOCKER_SECRET_FOLDER_PATH}:/etc/laosysteem
+
+  database:
+    container_name: laosysteem-db
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: laosysteem
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  cache:
+    container_name: laosysteem-cache
+    image: redis:alpine
+    restart: always
+    command: ["redis-server", "--appendonly", "yes"]
+    healthcheck:
+      test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]
+    volumes:
+      - cache-data:/data
+
+
+
+volumes:
+  db-data:
+    driver: local
+  cache-data:
+    driver: local

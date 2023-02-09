@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  laosysteem-be:
+    image: laosysteem-be:${CI_COMMIT_SHA}
+    restart: always
+    volumes:
+      - /data/be-data:/laosysteem/storage
+    env_file:
+      - /etc/laosysteem/docker.env
+
+
+  laosysteem-scheduler:
+    image: laosysteem-be:${CI_COMMIT_SHA}
+    environment:
+      APP_ENV: scheduler
+
+  laosysteem-worker:
+    image: laosysteem-be:${CI_COMMIT_SHA}
+    environment:
+      APP_ENV: worker
+    volumes:
+      - /data/be-data:/laosysteem/storage
+
+  database:
+    container_name: laosysteem-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /postgre_pwd
+      POSTGRES_DB: laosysteem
+    volumes:
+      - /etc/laosysteem/postgre_pwd:/postgre_pwd

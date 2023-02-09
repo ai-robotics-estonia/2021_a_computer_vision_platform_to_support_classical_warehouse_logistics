@@ -1,0 +1,28 @@
+stages:
+  - build
+  - deploy
+
+
+build:
+  stage: build
+  script:
+    - cp /etc/laosysteem/.env.production .
+    - docker build
+      --tag laosysteem-be:$CI_COMMIT_SHA
+      --target production
+      --network host
+      .
+  only:
+    refs:
+      - main
+
+
+deploy:
+  stage: deploy
+  script:
+    - cp /etc/laosysteem/.env.production ./.env
+    - docker compose -p laosysteem-production -f docker-compose.yml -f docker-compose.production.yml down
+    - docker compose -p laosysteem-production -f docker-compose.yml -f docker-compose.production.yml up -d --wait
+  only:
+    refs:
+      - main

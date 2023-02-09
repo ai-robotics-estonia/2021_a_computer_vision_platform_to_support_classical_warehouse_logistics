@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  laosysteem-be:
+    image: laosysteem-be:${BE_TAG:-latest}
+    user: root
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    volumes:
+      - be-storage:/laosysteem/storage
+
+  laosysteem-scheduler:
+    image: laosysteem-be:${BE_TAG:-latest}
+    environment:
+      APP_ENV: scheduler
+
+  laosysteem-worker:
+    image: laosysteem-be:${BE_TAG:-latest}
+    environment:
+      APP_ENV: worker
+
+  database:
+    environment:
+      POSTGRES_PASSWORD: 12345
+
+volumes:
+  be-storage:
+    driver: local

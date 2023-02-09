@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "laosysteem"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "~3.9"
+fastapi = "^0.78.0"
+SQLAlchemy = "^1.4.37"
+uvicorn = "^0.18.2"
+python-multipart = "^0.0.5"
+psycopg2 = "^2.9.3"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+fastapi-camelcase = "^1.0.5"
+alembic = "^1.8.0"
+pylas = "^0.4.3"
+python-dotenv = "^0.20.0"
+numpy = "^1.22.4"
+pyquaternion = "^0.9.9"
+pydantic = {extras = ["email"], version = "^1.9.1"}
+sqladmin = "^0.1.10"
+open3d = [
+    {version = "0.15.1", platform = "win32"},
+    {version = "0.15.1", platform = "darwin"},
+    {version = "0.15.2", platform = "linux"},
+]
+aiofiles = "^0.8.0"
+numpy-quaternion = "^2022.4.2"
+nest-asyncio = "^1.5.5"
+Pillow = "^9.1.1"
+pycryptodome = "^3.15.0"
+fastapi-cache2 = "^0.1.8"
+cachetools = "^5.2.0"
+paramiko = "^2.11.0"
+celery = {extras = ["redis"], version = "^5.2.7"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

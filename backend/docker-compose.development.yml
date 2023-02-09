@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  laosysteem-be:
+    image: laosysteem-be:${BE_TAG:-development}
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    volumes:
+      - ${VENV_PATH}:/opt/pysetup/.venv1
+      - ${PROJECT_PATH}:/laosysteem
+
+  laosysteem-scheduler:
+    image: laosysteem-be:${BE_TAG:-development}
+    environment:
+      APP_ENV: scheduler
+    volumes:
+      - ${VENV_PATH}:/opt/pysetup/.venv1
+      - ${PROJECT_PATH}:/laosysteem
+
+  laosysteem-worker:
+    image: laosysteem-be:${BE_TAG:-development}
+    environment:
+      APP_ENV: worker
+    volumes:
+      - ${VENV_PATH}:/opt/pysetup/.venv1
+      - ${PROJECT_PATH}:/laosysteem
+
+  database:
+    environment:
+      POSTGRES_PASSWORD: 12345
+    ports:
+      - "5432:5432"
+
+  cache:
+    ports:
+      - "6379:6379"
