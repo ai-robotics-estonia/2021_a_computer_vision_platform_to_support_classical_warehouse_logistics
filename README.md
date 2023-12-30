@@ -39,4 +39,4 @@ Find the Docker Compose [files](backend) which define the setup.
 - AS Valdek: There has been general interest, but we will be able to name concrete candidates after demonstrating the actual results of the first and second phase to potential clients.
 
 # Custom agreement with the AIRE team
-Some of the details are omitted from this README as they are evident in Docker Compose files as described [above](#summary).
+Some of the details are omitted from this README as they are evident in Docker Compose files as described [above](#technical-architecture).
