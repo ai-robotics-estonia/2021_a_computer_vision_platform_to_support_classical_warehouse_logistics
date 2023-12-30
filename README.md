@@ -6,6 +6,7 @@
 | Development Team Lead Name | [Dr. Juhan-Peep Ernits](https://www.etis.ee/CV/Juhan-Peep_Ernits/eng/) |
 | Development Team Lead E-mail | [juhan.ernits@taltech.ee](mailto:juhan.ernits@taltech.ee) |
 | Objectives of the Demonstration Project | Develop a system that can track products stored on pallets with accuracy of 2-3 m. |
+| Final Report | [Demoproject_report_1_Tehisintellektil_põhinev_laosüsteem.docx.pdf](https://github.com/ai-robotics-estonia/a_computer_vision_platform_to_support_classical_warehouse_logistics/files/13798011/Demoproject_report_1_Tehisintellektil_pohinev_laosusteem.docx.pdf); [Demonstration-Project_Report_#2.pdf](https://github.com/ai-robotics-estonia/a_computer_vision_platform_to_support_classical_warehouse_logistics/files/13798010/Demonstration-Project_Report_.2.pdf) |
 
 Some of the details are filled in the [description](#description) directly; some details are omitted based on a a [custom agreement with the AIRE team](#custom-agreement-with-the-AIRE-team).
 
