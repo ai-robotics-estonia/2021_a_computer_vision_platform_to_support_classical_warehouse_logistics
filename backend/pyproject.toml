@@ -33,7 +33,7 @@ Pillow = "^9.1.1"
 pycryptodome = "^3.15.0"
 fastapi-cache2 = "^0.1.8"
 cachetools = "^5.2.0"
-paramiko = "^2.11.0"
+paramiko = "^3.4.0"
 celery = {extras = ["redis"], version = "^5.2.7"}
 
 [tool.poetry.dev-dependencies]
